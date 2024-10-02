@@ -2,12 +2,12 @@
 ## Malicious URL Detection with Machine Learning
 
 ## Objective:
-This project aims to create a user-friendly web application that leverages a machine-learning model to detect phishing URLs. 
+This project aims to create a user-friendly web application that leverages a machine-learning model to detect malicious URLs. 
 The application will allow users to input URLs, view the AI-generated probability of the URL being malicious or Safe. 
 
 Phishing attacks pose a significant cybersecurity threat, often employing deceptive URLs to trick users. 
-While machine learning models can effectively identify phishing patterns, user feedback can enhance their accuracy. 
-This project addresses the challenge of creating an interactive application that combines AI-driven analysis with user input to improve phishing detection rates.
+While machine learning models can effectively identify url patterns. 
+This project addresses the challenge of creating an interactive application that combines AI-driven analysis with user input to improve malicious url detection rates.
 
 ## 1.Dataset Utilization:
 ○ Utilized the   https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset  Dataset, which contains various URL features.
