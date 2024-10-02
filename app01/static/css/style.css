@@ -1,0 +1,300 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+body {
+    display: flex;
+    justify-content: right;
+    margin-right: 100px;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #000; /* Black background */
+}
+/* Binary animation container */
+#binary-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Ensures binary flow is behind the main content */
+}
+/* Binary digit styling */
+.binary-digit {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    color: rgba(0, 255, 0, 0.8); /* Matrix-style green */
+    animation: verticalFlow  linear forwards; /* Animate falling */
+    white-space: nowrap; /* Ensures binary text doesn't wrap */
+}
+/* Keyframes for vertical flow */
+@keyframes verticalFlow {
+    0% {
+        top: -100px; /* Start above the screen */
+    }
+    100% {
+        top: 100vh; /* End below the screen */
+    }
+}
+.wrapper{
+    position: relative;
+    width:400px;
+    height: 500px;  
+}
+.form-wrapper {
+    position:absolute;
+    display: flex;
+    flex-direction: column; /* Change to 'row' if you want elements side by side */
+    justify-content: center; /* Centers items vertically */
+    align-items: center;     /* Centers items horizontally */
+    gap: 20px; /* Space between items */
+    padding: 20px; /* Padding inside the wrapper */
+    width: 100%; /* Make it full width */
+    height: 100%;
+    max-width: 600px; /* Optional: limit the width */
+    margin: 0 auto; /* Center the form horizontally on the page */
+    background-color: #f9f9f9; /* Optional: background color */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: slight shadow */
+}
+.wrapper .form-wrapper.sign-up{
+    transform: rotate(-25deg);
+}
+/* Fix: Merged .wrapper.animate-signin.form-wrapper.sign-up */
+.wrapper.animate-signin .form-wrapper.sign-up {
+    transform: rotate(-25deg);
+    animation: animaterotate 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+.wrapper.animate-signin .form-wrapper.sign-in {
+    animation: animatesignin 1.5s ease-in-out forwards;
+}
+/* Keyframes for 'sign-in' animation */
+@keyframes animatesignin {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0) rotate(-25deg);
+    }
+}
+/* Fix: Removed duplicate selector */
+.wrapper.animate-signin .form-wrapper.sign-up {
+    animation: animaterotate 0.7s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+/* Keyframes for rotating sign-up form */
+@keyframes animaterotate {
+    0% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform: rotate(0);
+        z-index: 1;
+    }
+}
+/* Animation for 'sign-up' form when signing up */
+.wrapper.animate-signup .form-wrapper.sign-up {
+    animation: animatesignup 1.5s ease-in-out forwards;
+}
+/* Keyframes for 'sign-up' animation */
+@keyframes animatesignup {
+    0% {
+        transform: translateX(0);
+        z-index: 1;
+    }
+    50% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0) rotate(-25deg);
+    }
+}
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    font-size: 100px;
+    position: absolute; /* Use absolute positioning */
+    left: 50px; /* Adjust as needed */
+    top: 50%; /* Position from the top */
+    transform: translateY(-50%); /* Center vertically */
+    overflow: hidden; /* Hide overflowing text */
+    background: #000;
+    white-space: nowrap; /* Prevent text from wrapping */
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.typewriter {
+    display: inline-block; /* Allow width to adjust based on content */
+    position: relative;
+    overflow: hidden; /* Hide text while typing */
+    border-right: 2px solid; /* Simulate cursor */
+    animation: typing 4s steps(14) infinite alternate; /* Typing animation */
+}
+.typewritter::after{
+    content: '|';
+    position: absolute;
+    background-color: #000;
+    right: 0;
+    color: #fff;
+    width: 50%;
+    animation: typing 3s steps(14) alternate infinite ,line 1s infinite  ;
+}
+@keyframes typing {
+    from {
+        width: 0; /* Start with no text visible */
+    }
+    to {
+        width: 100%; /* Show full text */
+    }
+}
+@keyframes line{
+    50%{
+        color: transparent;
+    }
+}
+h2{
+        font-size: 40px;
+        color: #000000;
+        text-align:center;
+}
+.input-group{
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+.input-group label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #333;
+    padding: 0 5px;
+    pointer-events: none;
+}
+.input-group input{
+
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    color:#333;
+    padding: 0 10px;
+    background:transparent ;
+    border: 1px solid #333;
+    outline: none;
+    border-radius: 5px;
+}
+.input-group input:focus~label,
+.input-group input:valid~label
+{
+    top: 0;
+    font-size: 12px;
+    background: #fff;
+}
+.forgot-pass
+{
+    margin: -15px 0 15px;
+}
+.forgot-pass a{
+
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+}
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+.btn
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #000000,#e91e63);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.sign-in
+{
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0;
+}
+.sign-in p
+{
+    color: #333;
+}
+.sign-in p a{
+    color: #e91e63;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.sign-in p a:hover{
+    text-decoration: underline;
+}
+/* Style for the modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Adjust margin to position the content */
+    padding: 40px; /* Inner padding for content */
+    border: 1px solid #888;
+    width: 400px; /* Increase the width of the modal box */
+    height: 370px; /* Increase the height of the modal box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+/* Close button */
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hide initially */
+}

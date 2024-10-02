@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <!-- Typewritter -->
+    <h1 class="typewritter">SafeURL Analyzer</h1>
+    <!--Matrix Kind of  Binary-flow -->
+    <div id="binary-flow"></div>
+    <div class="modal" id="errorModal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <p id="errorMessage"></p>
+        </div>
+    </div>
+    <div class="wrapper">
+        <!-- Signup Model -->
+        <div class="form-wrapper sign-up">
+            <form method="POST" action="{% url 'login_signup' %}">
+                {% csrf_token %}
+                <h2>Signup</h2>
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label for="">Password</label>
+                </div>
+                <button type="submit" class="btn" name="signup">Sign Up</button>
+                <div class="sign-in">
+                    <p>Already have an account? <a href="#" class="signin-link">Sign In</a></p>
+                </div>
+            </form>
+        </div>
+          <!-- SingnIn Model -->
+        <div class="form-wrapper sign-in">
+            <form method="POST" action="{% url 'login_signup' %}">
+                {% csrf_token %}
+                <h2>Login</h2>
+                <div class="input-group">
+                    <input type="text" name="username" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="forgot-pass">
+                    <a href="#" id="forgotPassLink">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn" name="login">Login</button>
+                <div class="sign-in">
+                    <p>Don't have an account? <a href="#" class="signup-link">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function showAlert(message) {
+        alert(message); // Display the alert message
+    }
+    // Wait for the DOM to fully load before checking for the alert message
+    document.addEventListener('DOMContentLoaded', function() {
+        const alertMessage = "{{ alert_message|default:''|escapejs }}"; // Safely retrieve the alert message
+        // Display the alert message after the page has fully loaded
+        if (alertMessage) {
+            setTimeout(() => {
+                showAlert(alertMessage); // Show the alert if the message exists
+            }, 100); // Delay to ensure it shows after page load
+        }
+    });
+</script>
+    </div>
+   <!-- Forgot Password Modal -->
+<div id="forgotPassModal" class="modal" style="display: none"> <!-- Start hidden -->
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Reset Password</h2>
+        <p>Please enter  username and new password:</p>
+        <div class="input-group">
+        <input type="text" id="usernameInput" placeholder="Enter your username" required>
+        <input type="password" id="newPasswordInput" placeholder="Enter new password" required>
+        </div>
+        <button class="btn" onclick="submitResetPassword()">Submit</button>
+    </div>
+</div>
+    <script src="{% static 'js/script.js' %}"> </script>
+</body>
+</html>

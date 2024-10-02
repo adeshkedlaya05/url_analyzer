@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </title></title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css'%}">
+</head>
+<body>
+    <!--NavBar -->
+  <nav class="navbar">
+    <div class="logo"><a href="#">SafeUrl Analyzer</a></div>
+    <div class="nav-buttons">
+        <button class="clear-history-btn" onclick="clearHistory()">Clear History</button>
+        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">LogOut</button>
+        </form>  
+    </div>
+</nav>
+<!-- Welcome_message -->
+<div class="welcome-message">
+    <h1>Welcome to SafeUrl Analyzer</h1>
+    <p>Analyze URLs in real-time to detect potential malicious links and keep your browsing secure!</p> 
+</div>
+<!--Url Submission -->
+<div class="url-submission">
+    <div class="input-group">
+        <input type="text" id="urlInput" placeholder="Enter URL to analyze" required> <!-- Input field for URL -->
+        <button class="btn" onclick="analyzeURL()">Analyze URL</button> <!-- Analyze button -->
+        <button class="refresh-btn" id="refreshIcon" onclick="clearInput()" aria-label="Clear Input">&#8635;</button> <!-- Refresh button -->
+    </div>
+    <div class="output-area" id="outputArea" style="display: none;"> <!-- Output area initially hidden -->
+        <p id="output"></p> <!-- Placeholder for the output message -->
+    </div>
+</div>
+<!-- History Table -->
+<div class="history-container">
+    <table id="historyTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>URL</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in history %}
+            <tr>
+                <td>{{ entry.timestamp|date:"Y-m-d H:i" }}</td>
+                <td>{{ entry.url }}</td>
+                <td>{{ entry.result }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">No history available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>   
+    <h3>The Model Can Make Mistakes..!</h3>
+</div>
+<script>
+    function showAlert(message) {
+        alert(message); // Display the alert message
+    }
+    // Wait for the DOM to fully load before checking for the alert message
+    document.addEventListener('DOMContentLoaded', function() {
+        const alertMessage = "{{ alert_message|default:''|escapejs }}"; // Safely retrieve the alert message
+        // Display the alert message after the page has fully loaded
+        if (alertMessage) {
+            setTimeout(() => {
+                showAlert(alertMessage); // Show the alert if the message exists
+            }, 100); // Delay to ensure it shows after page load
+        }
+    });
+</script>
+<script src="{% static 'js/script.js' %}"> </script>
+</body>
+</html>

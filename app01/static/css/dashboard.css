@@ -1,0 +1,188 @@
+/* Resetting margin and padding */
+body, nav, div, button, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+body {
+    display: flex;
+    flex-direction: column; /* Allows scrolling vertically */
+    justify-content: flex-start; /* Align content to the top */
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-y: auto; /* Enable vertical scrolling */
+    background: rgb(24, 23, 23); /* Black background */
+    position: relative;
+}
+/* Navbar styling */
+nav.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for glassmorphism */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    position: fixed; /* Fixed navbar at the top */
+    top: 0;
+    z-index: 1000;
+    padding: 0 20px; /* Padding for spacing inside the navbar */
+}
+/* Logo styling */
+.logo {
+    flex: 1; /* Takes up the space on the left */
+}
+.logo a {
+    font-size: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* Buttons inside the navbar */
+.nav-buttons {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+.nav-buttons button {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent button background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for the buttons */
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.nav-buttons button:hover {
+    background-color: rgba(239, 3, 3, 0.838); /* Hover effect */
+}
+/* Link inside navbar buttons */
+.nav-buttons a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+.welcome-message {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 30px;
+    text-align: center;
+    margin-top: 70px; /* Adjusted to account for the navbar */
+    color: #FFD700; /* Green text for emphasis */
+}
+.welcome-message h1 {
+    margin: 0;
+    font-size: 80px; /* Reduced to fit better with layout */
+}
+.welcome-message p{
+    color: white;
+    font-size: 30px;
+}
+.history-container h3 {
+    margin: 0;
+    font-size: 20px;
+    color: red;
+}
+/* URL submission area styling */
+.url-submission {
+    display: flex;
+    flex-direction: column; /* Stacking input group and output vertically */
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Space between elements */
+}
+/* Input group for URL and buttons */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and buttons */
+}
+/* Input styling */
+.input-group input {
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    flex-grow: 1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    width: 300px;
+}
+/* Analyze and reset button styling */
+.btn, .refresh-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transition: background 0.3s ease;
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.btn:hover, .refresh-btn:hover {
+    background-color: rgba(0, 255, 0, 0.8); /* Turns green on hover */
+}
+/* Output styling for safe URLs */
+.output-safe{
+   
+    color: rgba(0, 255, 0, 0.8); /* Green text */
+    font-size: 40px; /* Ensure font size is consistent */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Output styling for malicious URLs */
+.output-malicious {
+   
+    color: rgba(255, 0, 0, 0.8); /* Red text */
+    font-size: 40px; /* Ensure font size is consistent */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* History table styling */
+.history-container {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    padding: 10px; /* Padding around the container */
+    border-radius: 8px; /* Matches the table's corner radius */
+    overflow-x: auto; /* Allows horizontal scrolling if the table is too wide */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate; /* Use separate borders to maintain visibility */
+    border-spacing: 0; /* Ensures no spacing between cells */
+    margin-top: 30px;
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444; /* Solid border around the entire table */
+    border-radius: 8px; /* Corner radius */
+    overflow: hidden; /* Ensures proper rounded corners */
+}
+/* Styling for table cells */
+th, td {
+    padding: 10px;
+    border: 1px solid #444; /* Border for cells */
+}
+th {
+    background-color: #333; /* Header background color */
+}
+td {
+    text-align: left; /* Align text to the left */
+}
+/* Alternate row color for better visibility */
+tbody tr:nth-child(even) {
+    background-color: #2b2b2b; /* Alternate row color */
+}
+/* Fix for the bottom border visibility */
+table tbody tr:last-child td {
+    border-bottom: 1px solid #444; /* Ensure the bottom row has a border */
+}
+/* To ensure the bottom border is visible even when scrolled */
+table {
+    margin-bottom: 10px; /* Adds extra spacing to ensure visibility */
+}
