@@ -18,7 +18,7 @@ This project addresses the challenge of creating an interactive application that
 ○ Enhanced the dataset by engineering additional features that could improve the model’s accuracy. 
 
 ## 3.Model Development:
-○ implemented XGBoost algorithm to train and implement the machine learning model.
+○ implemented XGBoost Model to train and implement the machine learning model.
 
 ## 4.Web Application :
 ○ A user-friendly and visually appealing web application with a clear input field for URLs.
