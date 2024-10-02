@@ -59,7 +59,8 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 - **Clear Steps**: Provide step-by-step instructions so that users can easily follow along.
 - **Clone Command**: Make sure to include the correct clone command for your repository.
 - **Virtual Environment**: It’s a good practice to encourage the use of virtual environments to avoid conflicts with other projects.
-- **Installation Command**: Highlight the use of `pip install -r requirements.txt` to make it clear that users should install dependencies from this file.
+- **Installation Command**: Use `pip install -r requirements.txt` command to install dependencies required for this project .
+- **Perform Migrations**: Run this command to create new migration files based on the changes made to your models.`python manage.py makemigrations` and run this command to apply the created migrations to the database.`python manage.py migrate`
 - **Run the application**: Run the application using `python manage.py runserver` command .
 
 
