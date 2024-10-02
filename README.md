@@ -60,6 +60,7 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 - **Clone Command**: Make sure to include the correct clone command for your repository.
 - **Virtual Environment**: It’s a good practice to encourage the use of virtual environments to avoid conflicts with other projects.
 - **Installation Command**: Highlight the use of `pip install -r requirements.txt` to make it clear that users should install dependencies from this file.
+- **Run the application**: Run the application using `python manage.py runserver` command .
 
 
 
