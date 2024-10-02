@@ -20,11 +20,11 @@ This project addresses the challenge of creating an interactive application that
 ## 3.Model Development:
 ○ implemented XGBoost Model to train and implement the machine learning model.
 
-## 4.Web Application :
+## 4.Web Application:
 ○ A user-friendly and visually appealing web application with a clear input field for URLs.
 Real-time display of the AI-generated probability. A database to store all the userdata,urls and its result and also the display the urls,and its results
 
-## 5.Results of the Model
+## 5.Results of the Model:
 The model's performance on the test dataset is summarized below:
 
 - **Accuracy**: 94.81%
