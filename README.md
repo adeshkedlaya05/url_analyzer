@@ -10,19 +10,20 @@ While machine learning models can effectively identify url patterns.
 This project addresses the challenge of creating an interactive application that combines AI-driven analysis with user input to improve malicious url detection rates.
 
 ## 1.Dataset Utilization:
-○ Utilized the   https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset  Dataset, which contains various URL features.
+- Utilized the   https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset  Dataset, which contains various URL features.
 
-○ Cleaned and preprocessed the dataset to handle missing values, outliers, and feature encoding.
+-  Cleaned and preprocessed the dataset to handle missing values, outliers, and feature encoding.
 
 ## 2.Feature Engineering:
-○ Enhanced the dataset by engineering additional features that could improve the model’s accuracy. 
+- Enhanced the dataset by engineering additional features that could improve the model’s accuracy. 
 
 ## 3.Model Development:
-○ implemented XGBoost Model to train and implement the machine learning model.
+- implemented XGBoost Model to train and implement the machine learning model.
 
 ## 4.Web Application:
-○ A user-friendly and visually appealing web application with a clear input field for URLs.
-Real-time display of the AI-generated probability. A database to store all the userdata,urls and its result and also the display the urls,and its results
+-  A user-friendly and visually appealing web application with a clear input field for URLs.
+- Real-time display of the AI-generated probability.
+- A database to store all the userdata,urls and its result and also the display the urls,and its results
 
 ## 5.Results of the Model:
 The model's performance on the test dataset is summarized below:
