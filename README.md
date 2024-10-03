@@ -32,6 +32,11 @@ The model's performance on the test dataset is summarized below:
 - **Recall**: 88.86%
 - **F1-Score**: 91.92%
 
+## Graph for comparing actual and predicted values
+
+<img src=https://github.com/user-attachments/assets/679bb067-4f9e-4455-b7fc-2a8d2ae79b28 width="500"/>
+
+
  ## Technologies Used
 
 | Technology         | Description                                   |
