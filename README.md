@@ -92,7 +92,8 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 ![Screenshot 2024-10-02 221249](https://github.com/user-attachments/assets/08397702-614a-4634-989c-0de944694634)
 
 ## 6.Snapshot of Database 
-![Screenshot 2025-04-19 210636](https://github.com/user-attachments/assets/70427cff-d9d3-4d48-9592-7acf1894e203)
+![Screenshot 2025-04-19 210636](https://github.com/user-attachments/assets/18ad5427-24ad-4ecb-85a4-9fc2f8087984)
+
 
 
 
