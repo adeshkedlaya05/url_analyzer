@@ -79,7 +79,7 @@ The model's performance on the test dataset is summarized below:
 | Pandas             | Data manipulation and analysis library        |
 | scikit-learn       | Machine learning library for evaluation       |
 | Postgresql         |Advanced open-source relational database system for structured data storage and management.                |
-
+|Numpy               |NumPy is a Python library used for working with arrays.It also has functions for working in domain of linear algebra, fourier transform, and matrices.         |
 
 ---
 
