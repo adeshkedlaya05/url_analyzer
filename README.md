@@ -1,6 +1,7 @@
 # Safe Url Analyzer
 ## Malicious URL Detection with Machine Learning
 
+
 ## Objective:
 This project aims to create a user-friendly web application that leverages a machine-learning model to detect malicious URLs. 
 The application will allow users to input URLs, view the AI-generated probability of the URL being malicious or Safe. 
@@ -9,21 +10,40 @@ Phishing attacks pose a significant cybersecurity threat, often employing decept
 While machine learning models can effectively identify url patterns. 
 This project addresses the challenge of creating an interactive application that combines AI-driven analysis with user input to improve malicious url detection rates.
 
+---
+
 ## 1.Dataset Utilization:
 - Utilized the   https://www.kaggle.com/datasets/sid321axn/malicious-urls-dataset  Dataset, which contains various URL features.
 
 -  Cleaned and preprocessed the dataset to handle missing values, outliers, and feature encoding.
 
+---
+
 ## 2.Feature Engineering:
-- Enhanced the dataset by engineering additional features that could improve the model’s accuracy. 
+- Enhanced the dataset by engineering additional features that could improve the model’s accuracy.
+
+---
 
 ## 3.Model Development:
 - implemented XGBoost Model to train and implement the machine learning model.
+
+---
 
 ## 4.Web Application:
 -  A user-friendly and visually appealing web application with a clear input field for URLs.
 - Real-time display of the AI-generated probability.
 - A database to store all the userdata,urls and its result and also the display the urls,and its results
+
+---
+  
+## Application Architecture
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f5a0b5d6-28be-4430-b2e7-22c3db9f45d7"
+ alt="Architecture Diagram" width="600"/>
+</p>
+
+
+---
 
 ## 5.Results of the Model:
 The model's performance on the test dataset is summarized below:
@@ -33,9 +53,17 @@ The model's performance on the test dataset is summarized below:
 - **Recall**: 88.86%
 - **F1-Score**: 91.92%
 
+---
+
 ## Graph for comparing actual and predicted values
 
-<img src=https://github.com/user-attachments/assets/679bb067-4f9e-4455-b7fc-2a8d2ae79b28 width="500"/>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fed34b93-b4c1-48e6-a842-42118a041a8d"
+ alt="Architecture Diagram" width="600"/>
+</p>
+
+
+---
 
 
  ## Technologies Used
@@ -52,6 +80,9 @@ The model's performance on the test dataset is summarized below:
 | scikit-learn       | Machine learning library for evaluation       |
 | Postgresql         |Advanced open-source relational database system for structured data storage and management.                |
 
+
+---
+
 ## Clone the Repository
 You can clone this repository using the following command:
 
@@ -59,6 +90,7 @@ You can clone this repository using the following command:
 git clone https://github.com/adeshkedlaya05/url_analyzer
 ```
 
+---
 
 ### Key Points
 
@@ -68,6 +100,7 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 - **Run the application**: Run the application using `python manage.py runserver` command .
 
 
+---
 
 # Sample Images of the Project
 ## 1.Login Page
@@ -90,6 +123,9 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 
 
 ![Screenshot 2024-10-02 221249](https://github.com/user-attachments/assets/08397702-614a-4634-989c-0de944694634)
+
+
+---
 
 ## 6.Snapshot of Database 
 ![Screenshot 2025-04-19 210636](https://github.com/user-attachments/assets/18ad5427-24ad-4ecb-85a4-9fc2f8087984)
