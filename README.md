@@ -83,15 +83,6 @@ The model's performance on the test dataset is summarized below:
 
 ---
 
-## Clone the Repository
-You can clone this repository using the following command:
-
-```bash
-git clone https://github.com/adeshkedlaya05/url_analyzer
-```
-
----
-
 
 # Sample Images of the Project
 ## 1.Login Page
@@ -120,6 +111,16 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 
 ## 6.Snapshot of Database 
 ![Screenshot 2025-04-19 210636](https://github.com/user-attachments/assets/18ad5427-24ad-4ecb-85a4-9fc2f8087984)
+
+
+---
+
+## Clone the Repository
+You can clone this repository using the following command:
+
+```bash
+git clone https://github.com/adeshkedlaya05/url_analyzer
+```
 
 
 
