@@ -92,15 +92,6 @@ git clone https://github.com/adeshkedlaya05/url_analyzer
 
 ---
 
-### Key Points
-
-- **Virtual Environment**: It’s a good practice to encourage the use of virtual environments to avoid conflicts with other projects.
-- **Installation Command**: Use `pip install -r requirements.txt` command to install dependencies required for this project .
-- **Perform Migrations**: Run this command to create new migration files based on the changes made to your models.`python manage.py makemigrations` and run this command to apply the created migrations to the database.`python manage.py migrate`
-- **Run the application**: Run the application using `python manage.py runserver` command .
-
-
----
 
 # Sample Images of the Project
 ## 1.Login Page
