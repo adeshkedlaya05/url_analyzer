@@ -36,14 +36,14 @@ This project addresses the challenge of creating an interactive application that
 
 ---
   
-## Application Architecture
+## 5.Application Architecture
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f5a0b5d6-28be-4430-b2e7-22c3db9f45d7"
  alt="Architecture Diagram" width="600"/>
 </p>
 
 ---
-## 📡 API Endpoints
+## 6.API Endpoints
 
 ### 🔐 Authentication
 
@@ -103,7 +103,7 @@ This project addresses the challenge of creating an interactive application that
 ---
 
 
-## 5.Results of the Model:
+## 7.Results of the Model:
 The model's performance on the test dataset is summarized below:
 
 - **Accuracy**: 94.81%
@@ -113,7 +113,7 @@ The model's performance on the test dataset is summarized below:
 
 ---
 
-## Graph for comparing actual and predicted values
+## 8.Graph for comparing actual and predicted values
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fed34b93-b4c1-48e6-a842-42118a041a8d"
@@ -124,7 +124,7 @@ The model's performance on the test dataset is summarized below:
 ---
 
 
- ## Technologies Used
+ ## 9.Technologies Used
 
 | Technology         | Description                                   |
 |--------------------|-----------------------------------------------|
@@ -142,7 +142,7 @@ The model's performance on the test dataset is summarized below:
 ---
 
 
-# Sample Images of the Project
+# 10.Sample Images of the Project
 ## 1.Login Page
 ![Screenshot 2024-10-02 221140](https://github.com/user-attachments/assets/073f4dd4-f20f-41de-b281-6dd92c71ed87)
 
