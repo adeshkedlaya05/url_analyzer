@@ -42,8 +42,66 @@ This project addresses the challenge of creating an interactive application that
  alt="Architecture Diagram" width="600"/>
 </p>
 
+---
+## 📡 API Endpoints
+
+### 🔐 Authentication
+
+#### Signup / Login  
+`POST /login_signup/`  
+- **Signup:** Send `username`, `email`, and `password`  
+- **Login:** Send `username` and `password`  
+- **Response:** Redirects to dashboard or shows an error message
 
 ---
+
+### 📊 Dashboard
+
+#### Get User Dashboard  
+`GET /dashboard/`  
+- Requires authentication  
+- Response: Renders HTML page showing the user's URL analysis history
+
+---
+
+### 🧠 URL Analysis
+
+#### Analyze a URL  
+`POST /analyze/`  
+- **Form Data:**  
+  - `url`: URL to analyze  
+- **Response:** JSON indicating whether the URL is `"safe"` or `"malicious"`
+
+---
+
+### 📜 URL History
+
+#### Add to History  
+`POST /add_history/`  
+- **Headers:** `Content-Type: application/json`  
+- **Body:** URL and its analysis result  
+- **Response:** JSON with the timestamp, URL, and result
+
+#### Clear History  
+`POST /clear_history/`  
+- Clears all history entries for the logged-in user  
+- **Response:** JSON message confirming history was cleared
+
+---
+
+### 🔑 Password Management
+
+#### Reset Password  
+`POST /reset_password/`  
+- **Headers:** `Content-Type: application/json`  
+- **Body:** `username` and `new_password`  
+- **Responses:**
+  - Success: Password reset confirmation message
+  - If username not found: Error message stating username not found
+  - If bad request: Error message for invalid request
+
+---
+
 
 ## 5.Results of the Model:
 The model's performance on the test dataset is summarized below:
