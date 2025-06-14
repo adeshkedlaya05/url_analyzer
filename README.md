@@ -32,7 +32,7 @@ This project addresses the challenge of creating an interactive application that
 ## 4.Web Application:
 -  A user-friendly and visually appealing web application with a clear input field for URLs.
 - Real-time display of the AI-generated probability.
-- A database to store all the userdata,urls and its result and also the display the urls,and its results
+- A cloud-hosted PostgreSQL database on AWS RDS is used to securely store all user data, shortened URLs, and their analysis results, enabling seamless retrieval and display of URL histories and outcomes.
 
 ---
   
