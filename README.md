@@ -138,7 +138,7 @@ The model's performance on the test dataset is summarized below:
 | scikit-learn       | Machine learning library for evaluation       |
 | Postgresql         |Advanced open-source relational database system for structured data storage and management.                |
 |Numpy               |NumPy is a Python library used for working with arrays.It also has functions for working in domain of linear algebra, fourier transform, and matrices.         |
-
+|Amazon RDS (Relational Database Service)     |Amazon RDS (Relational Database Service) is a managed service by AWS that makes it easy to set up, operate, and scale relational databases in the cloud.    |
 ---
 
 
